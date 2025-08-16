@@ -1,0 +1,21 @@
+name: NodeJS Github Action
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v5 # checkout the repo and download it to run on server
+
+      - name: Use Node
+        uses: actions/setup-node@v4 # install nodejs(18) with tools like npm and yarn needed for workflows
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run test
+        run: npm test

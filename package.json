@@ -1,0 +1,27 @@
+{
+  "name": "github-actions-demo-with-ci-cd-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest src/app.test.js",
+    "start": "node src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krushnatawri18/Github-Actions-Demo-With-CI-CD-Pipeline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krushnatawri18/Github-Actions-Demo-With-CI-CD-Pipeline/issues"
+  },
+  "homepage": "https://github.com/Krushnatawri18/Github-Actions-Demo-With-CI-CD-Pipeline#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5",
+    "supertest": "^7.1.4"
+  }
+}
