@@ -25,7 +25,7 @@ jobs:
     needs: build
     container: ghcr.io/railwayapp/cli:latest
     env:
-      SVC_ID: afd52bcd-8f8e-4d66-95af-21c171739c08
+      SVC_ID: e11bacde-09a5-41b1-8baf-be547c40408e
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
     steps:
       - uses: actions/checkout@v3
