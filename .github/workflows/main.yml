@@ -27,4 +27,4 @@ jobs:
       - name: Deploy to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up
+        run: railway up --service=afd52bcd-8f8e-4d66-95af-21c171739c08
