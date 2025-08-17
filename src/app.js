@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 
 app.get("/", (req, res) => {
   res.status(200).send("Hello from Github Action With CI/CD Pipeline Demo App!");
