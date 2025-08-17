@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - uses: actions/checkout@v3 # checkout the repo and download it to run on server
+      - uses: actions/checkout@v3
 
       - name: Use Node
-        uses: actions/setup-node@v4 # install nodejs(18) with tools like npm and yarn needed for workflows
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -20,18 +20,11 @@ jobs:
       - name: Run test
         run: npm test
 
-      - run: npm install
-      - run: npm test
-
-      - name: Install Railway
+      - name: Install Railway CLI
         run: npm i -g @railway/cli
 
-      - name: Link Railway Project
-        run: railway link --project bd004e0f-f45d-4360-b00b-44ccbb2c001f
+      - name: Deploy to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-
-      - name: Deploy
-        run: railway up
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          railway up
